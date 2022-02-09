@@ -1,0 +1,471 @@
+java Introduction:
+------------------
+
+language:
+========
+to communicate with the persons 
+
+general langauges: telugu , hindi,english
+
+programming language:
+-----------------
+To communicate with the machine :binary lang --> 0's 1's 
+
+
+By using programming lang what we can can develope:
+===============================================
+
+applications/softwares 
+
+
+ATM Applications 
+Billing applications 
+Calculator applications
+
+two type of applications:
+----------------------------
+1. standalone applications/desktop  :
+
+        the application which we can run on our machine: ex:notepad, antivirus, vlc media,acrobac
+		   standalone applications data wont be shareble.
+
+2. Distributed applications :
+      the application which it s run on server  ex: browsers,watsup,instagram
+	        distributed application data is shareble across the globe.    
+      
+
+  pop                                            oop
+  
+  procedure oriented programming              object oriented programming 
+  
+  b , c ,bcpl,cobolt                               java,python,c++,.Net
+  
+  
+
+1. security and performance
+
+
+oopl                                                      oops
+object oriented programming languages                 object oriented programming systems
+
+many lang                                                 features/methodologies
+
+
+
+--> canadien org(omg)-->object management group 
+
+    -->inheritance
+	-->polymorphism
+	---> abstraction
+	---> encapsulation
+
+
+
+
+
+java:
+=====
+java is one of the oop lanagage for the purpose of developing both standalone, adn distributedd applications.
+
+father / doctor jav: james gosling   in the year of ==> 1995
+
+
+
+current version: java se 17
+standard version is : java se 8
+
+
+sunmicro systems: --> oracle corporation(owner)
+
+3 editions:
+-----------
+JSE:JAVA STADARD EDITION: CORE : STANDALONE APPLICATION
+JEE:JAVA ENTERPRISE EDITION: CORE, ADVANCED
+JME:JAVA MICRO/MOBILE EDITION: MOBILE APPLICATION
+
+JAVA FEATURES:
+-------------
+PORTABLE,
+SECURED. 
+ROBUST,
+MULTITHREADED,
+DISTRIBUTED,
+DYNAMIC, 
+PLATFORM 
+INDEPENDENT,
+GARBAGE COLLECTION,
+SIMPLE
+OOP
+
+
+1.PLATFORM INDEPENDENT
+2. GARBAGE COLLECTION 
+
+
+
+Prequiste to write java program:
+--------------------------------
+
+c program---> c software ---->turboC
+cpp program ---> cpp software-->turbocpp
+
+java program --->java software -> jdk(java developemnt kit)
+
+java 8 lts: jdk 8
+
+www.oracle.com 
+
+1.download the software 
+2.install
+3. we need editors: notepad,notepad++,eclipse.intelij, vs,
+4. write the java program 
+5. save the file 
+6.compile the java program 
+7. execute the program 
+
+
+java-->53 key words --> goto,constant 
+
+comments: 
+
+     single line: // 
+	 multi line comments :
+	 /*   
+	 
+	 ndc
+	 cd,mc d
+	 d,mcd
+	 */
+
+structure of java program:
+==========================
+
+
+class Test {  //class is opened
+
+    public static void main(String args[]){  //main method 
+	
+	 System.out.println("hello world");
+	
+	}
+}
+
+
+types of extension
+
+.py
+.c
+.cpp 
+.java
+
+
+1. .java 
+2. .class
+3. compilation
+4. execution 
+5. jvm (java virtual machine)
+
+                       compilation(compiler)
+.java(source code)--------------------------->.class(machine code)
+user understanble lang                          understnd by machine
+
+
+syntax: compilation: javac filename.java 
+
+
+syntax: execution: java filename 
+
+
+
+
+1. platform independnt
+2. garbage collection 
+
+
+WORA(WRITE ONCE RUN ANYWHERE)
+
+.java file        PI
+windows--------------------------------->Linux
+.class                                     .class
+
+
+.NET
+                pd
+WIDOWS-------------------------------------> linux
+                                                .class
+.CLASS
+
+
+garbage colloction:
+-------------------
+
+
+int age=34;      //4bytes
+
+
+1 project -->1000 variables   1000*4=4000bytes
+
+1 variable     999-->space
+
+garabage collection (garbage collector)--> it will collect all unwanted data 
+
+
+variables:
+----------
+
+variable is container / storage location to store values.
+
+
+ex: String name="jaish";
+
+   syntax:   datatype variablename = value/data;
+                 int sathya="77553636";
+                 char c= 'd';
+
+Datatypes:
+----------
+
+itis representing the type of data which we we stored in variable .
+
+1. primitive dt /built 
+2. non primitive  -->String ,Array
+
+char byte, boolean, short,int long
+
+float,double
+
+
+byte ---->  
+
+1 byte ---> 8bits
+
+range: -128 to 127
+
+byte b=128//incalid 
+  n= number of bits 
+
+      formula: - 2(n-1) to 2 (n-1)-1
+
+- 2*7     to 2*7-1
+-128    to    127
+short 
+int 
+long ---->  to store  numbers 
+float 
+double -----> to store decimal values 
+char-----> to store charectrs
+boolean ----> to store logical values true,false 
+
+
+variable:
+---------
+
+syntax:     datatype variablename= value/data;
+
+
+two types of variables:
+----------------------
+
+1. local variable :  we can define with in the method 
+2. global variable  : we can define outside the method with in the class.
+        * static  variable 
+         *instance variable		 
+
+
+
+
+class Test{
+
+           //global variables declaration
+		   
+		static  int schoolName="dps";   //static variable
+		        short number=78;  //instance variable
+		   
+   public static void main (String  args[])  //jvm   
+                                                   
+   {
+   
+       int pincode=50866; //local variable
+	   System.out.println(pincode);  //local varible printing
+	   
+	   
+	   System.out.println(Test.schollName); //print static variable by using class name
+	   System.out.println(schollName); //printing static variable
+        
+		Test   sathya= new Test(); //object creation 
+		
+		
+		System.out.println(sathya.number ); //insrtance variable printing
+		
+		
+   }
+}
+
+
+
+
+************************************
+*****
+variable properties(variables,methods):
+------------------------------------
+4 difference propertis
+
+1. syntax:
+
+     if it is static property we need to "static" key word  : static datatype variablename=value;
+     without static keyword "instance prprty"     :                   datatype variablename= value;
+
+
+2. memory allocation:
+    "static" properties will get the memory space @ the time of "class loading into jvm"
+   "instance "properties will get the memory space at the time of "object creation"
+
+3. How to access:
+      static property will access by using "by using class Name"(recomnded)
+      instance property wil access by using "object reference"
+
+4. when to access: 
+      whene ever we have common properties "static "
+	  whever we have unique properties "instance"
+
+
+
+ex:    1000 students
+
+            studid:  4bytes
+			stuname:
+			studentadd:
+			studntclass:
+			1**student schoolname:4bytes
+
+
+
+
+	Object creation:
+	----------------
+	
+	
+	className objectReference= new Constructor();
+	
+	Test   sathya= new Test();
+	
+method:
+------
+
+method is the location where we are going to perform action.
+
+
+
+
+
+public static void main(String []args){}
+Syntax:
+-------	
+accessModifier returnType methodName( parameters ref)
+{
+action
+
+}	
+	
+	
+public void dispaly()   // without paramter without returntype
+{
+System.out.println("hello i am display method");
+
+   String name="sathya"; //
+
+}	
+public static void SubOfTwoNumbers(int a, int b) //with parameters without returntype
+
+{
+System.out.println(a-b);
+
+}
+     
+public int  sumOfTwoNumbers(int a,int b)
+{
+  return a+b;
+   
+}
+
+
+ex:
+====
+
+public class Test {
+
+	static String schoolName = "dps"; // static variable
+	int number = 567; // instance variable
+
+	public void dispaly() { // instance method
+		System.out.println("i am dispaly method");
+		int age = 45;
+	}
+
+	public int sumOfTWoNumbers(int a, int b) { // instance method
+		return a + b;
+	}
+
+	public static void subOfTwoNumbers(float a, float b) { // static method
+		System.out.println(a - b);
+	}
+
+	public static void main(String[] args) { // main method
+
+		int pincode = 6789; // local variable
+		System.out.println(pincode);
+		// calling static prpoperties
+
+		System.out.println(Test.schoolName);
+		System.out.println(schoolName);
+
+		Test.subOfTwoNumbers(78.0f, 45.0f); // static method calling
+
+		// object creation
+
+		Test obj = new Test(); // object creation
+
+		System.out.println(obj.number);
+
+		obj.dispaly();
+
+		System.out.println(obj.sumOfTWoNumbers(74, 36));
+
+	}
+
+}
+
+
+
+flow controls:
+---------------
+
+state 1   7times
+
+ste 2
+
+st 3  --5 times
+
+..
+
+
+st 10 --- 10times
+
+we can control the flow of the program 
+
+
+
+
+1.selection statements
+      condition based 
+	  
+	    if else
+		if else if
+		switch
+2. iterative statements 
+       for 
+	   while
+	   do while 
+	      
+3.jump statments
+  break and continue
