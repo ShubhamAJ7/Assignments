@@ -1,0 +1,82 @@
+className objectrefrence= new Constructor();
+Test t= new Test();
+
+Reference datatypes:
+--------------------
+
+1.primitive dt : byte short int long float double char boolean
+
+2. non-primitive dt: String ,Array (reference dt)
+
+
+* it contains address(or reference) of dynamically created objects.
+
+* java.lang.Object :(reference object)  
+                    it provide access to the stored objects in the memory.
+					
+		
+		ex: String, Array,interface, class 
+
+    class: it will describe about the object.
+	Array: it has fixed in size,stores the elemnts same type 
+	interface: implemnted by java classes 
+	
+	
+referenc dt and primitive:
+------------------------
+it is not predefined, except String 
+   primitive dt are predefined 
+all reference dt are uppercase letters.
+   primitive dt are lowercase
+refrenced dt has same size 
+   primitive dt are depends on which dt we are using 
+reference dt are null
+  primitive dt are not null 
+refrence dt ex; Array ,String,class,interface 
+  primitive dt : char,int,float,double,long,boolean,
+refrence dt : 8bytes each refrence variable 
+    Test t ;
+  primitive dt:  int num=45;
+  
+  
+Heap Area and stack area:
+--------- ---------------
+
+*memory management 
+    jvm 
+	
+	. Heap area    : objects :  full:java.lang.OutOfMemoryError
+	
+	                              . permanent generation
+								  . code cache 
+								  . surviovor space
+								  . young generation 
+								  .old generation
+	
+	. stack area : methods ,varaibles  LIFO
+	                 full: java.lang.StackOverFlowError
+
+
+differences:
+-------------
+ stack area: LIFO order
+     heap are: not follow any order 
+ stack area: size is small,limited
+     heap area: size is large,
+ stack area:methods, varible 
+     heap area: objects 
+ stack area: faster
+    heap area is : slower 
+ stack area: owner can see these threads
+   heap area : visibile all threads 
+ stack area: -xss
+   heap area:  -xmx or xms
+   
+   
+   
+   
+ call by value and call by reference:
+=================================== 
+   
+   if we calling a method passing a value it : call by value 
+   the changes being happening in the passing method: call by reference

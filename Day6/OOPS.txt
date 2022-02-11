@@ -1,0 +1,464 @@
+oops features:
+---------------
+
+           oopl                             oops 
+
+object oriented programming langugae        object oriented oriented programming systems
+ 
+   
+   
+   features:
+   ---------
+   
+   1. inheritance
+   2. polymorphism----->performance  
+   3. abstraction 
+   4. encapsulation----> Security
+   
+   class, object :===>
+   
+   have you seen a car? --> No 
+             we canot seea car -->types of cars (maruti, innova)
+   have you seen a tree ?--->NO
+         we can see types of tree --> 
+		 
+		 
+	class:
+	------
+	class is blue print .It is collection data members with member functions 
+	  class is like logical entity
+	
+	   DNA ----> 
+	
+	
+	object:
+	-------
+	every object has state and behaviour:
+	   it is a physical entity.
+	object is "instance" of a class 
+	
+	
+	allocationg sufficient of memory space to class properties.
+	
+	
+Inheritance:
+------------
+
+inheritance is a mechanism in which one object aquirs all the properties and behaviours
+from parent class.
+
+
+4...8
+class oldCars{
+
+//1000 methods
+//200 variables 
+
+
+
+
+}
+	
+	
+class MyCar extends OldCar {
+
+30 methods 
+
+
+
+
+}
+	100child--->
+	
+
+**by using extends and implemnts : "code reusebility"
+	
+	
+types of inheritance:
+--------------------
+1.single level
+2. multilevel
+3.hirarchial
+4. hybrid
+5.multiple 
+	   
+
+ex1:
+-----
+package com.ia.oops;
+
+class Test{
+	
+	void sound() {
+		System.out.println("the sound is good in old car");
+	}
+	
+	static void enginePerformance() {
+		System.out.println("40 yrs");
+	}
+}
+public class InherEx extends Test {
+
+	  void design() {
+		  System.out.println("latest racing car model design with good features");
+	  }
+	public static void main(String[] args) {
+		
+		InherEx ix= new InherEx();
+		
+		ix.sound();
+		ix.design();
+		ix.enginePerformance();
+		
+	}
+}
+
+ex2:
+0------
+
+package com.ia.oops;
+
+//multilevel inheritance
+class Test{ //super parent
+	
+	void sound() {
+		System.out.println("the sound is good in old car");
+	}
+	
+	static void enginePerformance() {
+		System.out.println("40 yrs");
+	}
+}
+
+class Car extends Test{  //parent
+	
+	void speed() {
+		
+		System.out.println("400 rpm");
+	}
+}
+public class InherEx extends Car  {//child
+
+	  void design() {
+		  System.out.println("latest racing car model design with good features");
+	  }
+	public static void main(String[] args) {
+		
+		InherEx ix= new InherEx();
+		
+		ix.sound();
+		ix.design();
+		ix.enginePerformance();
+		ix.speed();
+		
+	}
+}
+
+ex3:
+----
+package com.ia.oops;
+
+//hirarchial level: one parent two childs
+class Test{ //super parent
+	
+	void sound() {
+		System.out.println("the sound is good in old car");
+	}
+	
+	static void enginePerformance() {
+		System.out.println("40 yrs");
+	}
+}
+
+class Car {  //child-1
+	
+	void speed() {
+		
+		System.out.println("400 rpm");
+	}
+}
+public class InherEx extends Car {//child-2
+
+	  void design() {
+		  System.out.println("latest racing car model design with good features");
+	  }
+	public static void main(String[] args) {
+		
+		InherEx ix= new InherEx();
+		
+		//ix.sound();
+		ix.design();
+	//	ix.enginePerformance();
+		ix.speed();
+		
+	}
+}
+
+multiple inheritance:
+------------------------
+package com.ia.oops;
+//multiple inheritance 
+// two parents :--> one child
+class A{
+	
+	void test() {
+		System.out.println("i am from class A");
+	}
+}
+class B{
+	
+	void test() {
+		System.out.println("i am from class B");
+	}
+}
+public class MultipleEx A,B {
+public static void main(String[] args) {
+	
+	MultipleEx mx= new MultipleEx();
+	
+	mx.test();
+	
+	//ambiguity:
+}
+}
+
+
+polymorphism:
+==============
+
+poly many morphism =forms 
+
+
+ +
+ 
+ 2+3=5
+ 2+"sathya"
+=2sathya
+
+opeartor overaloading
+
+
+1.method overloading 
+2. method overriding
+
+method overloading---
+=================
+method name is but num parameters are different
+                but type of parms r different
+				but order of params dffrt
+
+package com.ia.oops;
+
+public class OverloadEx {
+
+	public void add(int a,int b,int c) {
+		System.out.println("addition of three int numbers :"+(a+b+c));
+	}
+	public void add(int a,int b) {
+		System.out.println("addition of two int numbers :"+(a+b));
+	}
+	public void add(float a,float b) {
+		System.out.println("addition of two float numbers :"+(a+b));
+	}
+	public void add(float a,int b) {
+		System.out.println("addition of  float,int numbers :"+(a+b));
+	}
+	public void add(int a,float b) {
+		System.out.println("addition of int, float numbers :"+(a+b));
+	}
+public static void main(String[] args) {
+	
+	OverloadEx obj= new OverloadEx();
+	
+	obj.add(67, 34);
+	
+	obj.add(45.0f, 85);
+	
+	obj.add('a', 'b'); //type promotion
+	
+		
+}
+	
+}
+
+
+method overriding:
+-----------------
+
+method name is same but implementation is different 
+
+
+package com.ia.oops;
+
+class OdTv{
+	
+	void screen() {
+		System.out.println("lcd screen");
+	}
+	
+	void sound() {
+		System.out.println("sound is good");
+	}
+}
+
+public class OverrideEx extends OdTv {
+
+	   void design() {
+		   System.out.println("CHANGED THE DESIGN");
+	   }
+	   
+	   @Override
+	   void screen() {
+		   System.out.println("led screen");
+	   }
+	public static void main(String[] args) {
+		
+		OverrideEx obj= new OverrideEx();
+		
+		
+		obj.design();
+		obj.sound();
+		obj.screen();
+		
+				
+	}
+}
+
+
+
+this, and super:
+---------------
+
+this: this is keyword to represent current class properties.(variables,methods,constructor,object)
+
+super:  super is a keyword to represent parent class properties(varaibles,methods,construtors)
+
+
+
+
+class Test{
+
+int salary=45000;
+
+void getSalary(int salary){
+    salary=35000;
+	Syso(salary);     //35000, 45000 , 500
+}
+
+}
+
+this and super:
+-------------
+package com.ia.oops;
+
+class Parent{
+	int salary=56000;
+	void m1() {
+		System.out.println("i am parent classm1 method");
+	}
+	
+	public Parent() {
+		System.out.println("i am default construtr");
+	}
+	
+}
+public class ThisEx extends Parent {
+
+	int salary=45000;
+	
+	public ThisEx() { //child class defalt constructor
+		
+		super();
+	}
+	
+	void getSalary(int salary) {
+		salary=35000;
+		System.out.println("salary is :"+salary);
+		System.out.println("salry is :"+this.salary);
+		System.out.println("salary is:"+super.salary);
+		super.m1();
+		System.out.println(this);
+		
+	}
+	public static void main(String[] args) {
+		
+		
+		ThisEx t= new ThisEx();
+		
+		t.getSalary(7000); // 7000,35000,45000
+	}
+}
+
+Encapsulation:
+-------------
+
+binding/groping data memebers with memebr function 
+                             corresponding member methods are public 
+							 
+private data memebers with corresponding public methods.
+
+
+package com.ia.oops;
+
+public class Employee {
+	
+	private int empid; 
+	private String empname;
+	private int  empsal;
+	private String empadd;
+	private int empatm;
+	
+	public int getEmpid() {
+		return empid;
+	}
+	public void setEmpid(int empid) {
+		this.empid = empid;
+	}
+	public String getEmpname() {
+		return empname;
+	}
+	public void setEmpname(String empname) {
+		this.empname = empname;
+	}
+	public int getEmpsal() {
+		return empsal;
+	}
+	public void setEmpsal(int empsal) {
+		this.empsal = empsal;
+	}
+	public String getEmpadd() {
+		return empadd;
+	}
+	public void setEmpadd(String empadd) {
+		this.empadd = empadd;
+	}
+		public void setEmpatm(int empatm) {
+		this.empatm = empatm;
+	}
+	
+	//getters and seeters
+	
+	
+
+}
+
+hacker:
+=======
+package com.ia.oops;
+
+public class Hacker {
+
+	public static void main(String[] args) {
+		
+		Employee emp= new Employee();
+		
+		emp.setEmpid(123);
+		emp.setEmpadd("hyd");
+		emp.setEmpatm(1234);
+		emp.setEmpname("sonu");
+		emp.setEmpsal(1000);
+	
+		
+System.out.println(emp.getEmpadd()+""+emp.getEmpid()+""+emp.getEmpname()+""+emp.getEmpsal());
+	}
+}
