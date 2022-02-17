@@ -1,0 +1,222 @@
+file handling:
+--------------
+
+Generally in java programming we write applications or softwares in two ways 
+
+volatile or non persistence program 
+non-volatile or persistence program 
+
+
+A volatile program is one whose results is always stored into the main memory of computer 
+ i. e RAM . whatever the data which is stored in the maon memory of the computer taht data will be temporary
+ volatile memory 
+ 
+
+A non volatile program is one whose resuls is stored in secondary storage deveices: eg: hard disk, mangnetic tapes. etc
+the secondary storage devices are permnente storage.
+
+
+To store the data we have two approches 
+  *by using files 
+  *by using database 
+
+java.io.*;
+
+collection of records is known a file, a record is a collection of field values .
+
+A stream is a flow of data between primary memory to secondary memory 
+   locally to globally
+   
+   
+   
+  types of operations:
+  ==================
+   read operation 
+   write operation 
+   
+   
+   types of streams:
+   ================
+   byte stream 
+   charecter stream 
+   
+  byte stream :
+  ===========
+  
+  serialization:
+  ===========
+  
+  serilization is a process od writting the object data into network supported format  
+  
+  by defalut network wont be support object data thats y we have to convert this object dat into network suppoerted format
+  of file.
+      it is known as serilization 
+	 
+	if you want make a normal java class we need to implemnts serlization interface 
+	
+	
+	
+	predefine class: File
+  
+  
+    File f= new File("welcome.txt");
+	
+	   f.createNewFile();  //handles
+	   
+	   
+	==> if i  want to write some information into that file
+	
+	  these are all are predeffined classes
+	  
+	FileWriter, BufferedWriter,PrintWriter
+	
+	
+	1. package files;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class BufferedWriterEx {
+
+	public static void main(String[] args) throws IOException {
+		
+		FileWriter fw= new FileWriter("welcome.txt");
+	BufferedWriter bw= new BufferedWriter(fw);
+	
+	bw.write("welcome");
+	bw.write("to ");
+	bw.write("java");
+	bw.write("session");
+	bw.write(97);
+	bw.write(107);
+	bw.write(147);
+	
+	bw.close();
+		
+	System.out.println("inserted by using Buffered writer");
+		
+		
+		
+		
+	}
+}
+
+2. package files;
+
+import java.io.FileWriter;
+import java.io.IOException;
+//to write the information into the file 
+public class FileWriterEx {
+public static void main(String[] args) throws IOException {
+	
+	
+	FileWriter fw= new FileWriter("welcome.txt");
+	
+	fw.write("welcome");
+	fw.write("to ");
+	fw.write("java");
+	fw.write("session");
+	fw.write(97);
+	fw.write(107);
+	fw.close();
+	System.out.println("data is inserted");
+	
+	//disadvantage: it will allow only charecters
+}
+}
+
+3.package files;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class PrintWriterEx {
+public static void main(String[] args) throws IOException {
+	
+	
+	FileWriter fw= new FileWriter("welcome.txt");
+	PrintWriter pw= new PrintWriter(fw);
+	
+	
+	pw.println("welcoem");
+	pw.println("to");
+	pw.println("files");
+	pw.println("hello");
+	pw.println(90);
+	pw.println(true);
+	pw.close();
+	System.out.println("data is inserted");
+}
+}
+
+ex:
+===
+package files;
+
+import java.io.File;
+import java.io.IOException;
+
+public class Test {
+public static void main(String[] args) throws IOException {
+	
+	
+	File f= new File("welcome.txt"); //created file
+	
+	f.createNewFile();
+	
+	System.out.println("file is created");
+	
+}
+}
+
+
+
+to read the information  from the file 
+
+FileReader BuffereReader
+
+package files;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class FileReaderEx {
+public static void main(String[] args) throws IOException {
+	
+	
+	FileReader fr= new FileReader("welcome.txt");
+	
+	while(fr.read()!=-1) {
+		
+		char c=(char) fr.read();
+		System.out.print(c);
+	}
+}
+}
+
+
+ex:
+BuffereReader:
+--------------
+package files;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class FileReaderEx {
+public static void main(String[] args) throws IOException {
+	
+	
+	FileReader fr= new FileReader("welcome.txt");
+	
+	while(fr.read()!=-1) {
+		
+		char c=(char) fr.read();
+		System.out.print(c);
+	}
+}
+}
